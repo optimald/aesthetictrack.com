@@ -45,16 +45,40 @@ const ClientCTASection = () => {
 
           {/* Footer */}
           <div className="border-t pt-8">
-            <p className="text-gray-500 text-sm">
-              Powered by{' '}
-              <span className="font-semibold text-gray-700">optimal.dev</span>
-            </p>
-            <p className="text-gray-400 text-xs mt-1">
-              AI-accelerated software, engineered for results
-            </p>
-            <p className="text-gray-400 text-xs mt-2">
-              © 2025 aesthetictrack.com. All rights reserved.
-            </p>
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-center md:text-left">
+                <p className="text-gray-500 text-sm">
+                  Powered by{' '}
+                  <span className="font-semibold text-gray-700">optimal.dev</span>
+                </p>
+                <p className="text-gray-400 text-xs mt-1">
+                  AI-accelerated software, engineered for results
+                </p>
+                <p className="text-gray-400 text-xs mt-2">
+                  © 2025 aesthetictrack.com. All rights reserved.
+                </p>
+              </div>
+              <div className="flex space-x-6">
+                <Link
+                  href="/terms"
+                  className="text-gray-400 hover:text-orange-500 text-xs transition-colors"
+                >
+                  Terms of Service
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="text-gray-400 hover:text-orange-500 text-xs transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+                <a
+                  href="mailto:contact@aesthetictrack.com"
+                  className="text-gray-400 hover:text-orange-500 text-xs transition-colors"
+                >
+                  Contact
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

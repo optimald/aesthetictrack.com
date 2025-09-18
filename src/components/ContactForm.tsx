@@ -57,75 +57,91 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+              Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+              Email *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            />
+          </div>
+        </div>
+        
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-            Name *
+          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">
+            Company/Clinic Name
           </label>
           <input
             type="text"
-            id="name"
-            name="name"
-            required
-            value={formData.name}
+            id="company"
+            name="company"
+            value={formData.company}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
         </div>
+        
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email *
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
+            Message
           </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            value={formData.email}
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            value={formData.message}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+            placeholder="Tell us about your aesthetic practice and how we can help..."
           />
         </div>
-      </div>
+        
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-400 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+      </form>
       
-      <div>
-        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-          Company/Clinic Name
-        </label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        />
+      <div className="mt-4 p-4 bg-gray-800 rounded-lg">
+        <p className="text-gray-400 text-xs">
+          By submitting this form, you agree to our{' '}
+          <a href="/privacy" className="text-orange-500 hover:text-orange-400 underline">
+            Privacy Policy
+          </a>
+          {' '}and{' '}
+          <a href="/terms" className="text-orange-500 hover:text-orange-400 underline">
+            Terms of Service
+          </a>
+          . We will only use your email address to respond to your inquiry.
+        </p>
       </div>
-      
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={4}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          placeholder="Tell us about your aesthetic practice and how we can help..."
-        />
-      </div>
-      
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
-      >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
-      </button>
-    </form>
+    </div>
   );
 };
 
