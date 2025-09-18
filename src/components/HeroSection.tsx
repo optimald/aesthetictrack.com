@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Rocket } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,8 @@ const HeroSection = () => {
         <div className="text-center">
           {/* Demo Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-8">
-            🚀 Demo Platform - Aesthetic Device Management System
+            <Rocket className="w-4 h-4 mr-2" />
+            Demo Platform - Aesthetic Device Management System
           </div>
 
           {/* Main Heading */}

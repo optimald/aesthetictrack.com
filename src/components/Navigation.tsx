@@ -16,12 +16,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
+            <Link href="/" className="text-xl font-bold text-gray-900">
               LaserCare Pro
             </Link>
           </div>
@@ -33,7 +33,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
                 >
                   {item.name}
                 </Link>
@@ -45,7 +45,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="#pricing"
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
               View Pricing
             </Link>
@@ -61,7 +61,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -82,7 +82,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -91,7 +91,7 @@ const Navigation = () => {
               <div className="pt-4 space-y-2">
                 <Link
                   href="#pricing"
-                  className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   View Pricing

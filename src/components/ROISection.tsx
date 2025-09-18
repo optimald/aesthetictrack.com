@@ -1,17 +1,17 @@
 const ROISection = () => {
   const metrics = [
-    { value: "40%", label: "Reduction in Maintenance Costs", color: "text-green-600" },
-    { value: "75%", label: "Faster Equipment Lookup", color: "text-blue-600" },
-    { value: "90%", label: "Reduction in Lost Equipment", color: "text-purple-600" },
-    { value: "100%", label: "Compliance Achievement Rate", color: "text-green-600" },
-    { value: "$50K+", label: "Annual Savings Per Clinic", color: "text-yellow-600" },
-    { value: "17", label: "Devices Tracked", color: "text-indigo-600" },
-    { value: "25+", label: "Applicators Managed", color: "text-pink-600" },
-    { value: "99.9%", label: "Uptime Guarantee", color: "text-green-600" }
+    { value: "40%", label: "Reduction in Maintenance Costs", color: "text-green-400" },
+    { value: "75%", label: "Faster Equipment Lookup", color: "text-blue-300" },
+    { value: "90%", label: "Reduction in Lost Equipment", color: "text-purple-300" },
+    { value: "100%", label: "Compliance Achievement Rate", color: "text-green-400" },
+    { value: "$50K+", label: "Annual Savings Per Clinic", color: "text-yellow-300" },
+    { value: "17", label: "Devices Tracked", color: "text-indigo-300" },
+    { value: "25+", label: "Applicators Managed", color: "text-pink-300" },
+    { value: "99.9%", label: "Uptime Guarantee", color: "text-green-400" }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+    <section className="section-padding bg-gradient-to-br from-blue-600 to-purple-700 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
