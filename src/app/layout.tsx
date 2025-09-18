@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LaserCare Pro - Aesthetic Device Management System",
+  title: "aesthetictrack.com - Aesthetic Device Management System",
   description: "Save $50K+ annually on equipment management, reduce compliance risks by 90%, and boost staff productivity with our comprehensive platform for aesthetic clinics.",
   keywords: "aesthetic device management, laser equipment tracking, medical device compliance, clinic management software",
-  authors: [{ name: "LaserCare Pro" }],
+  authors: [{ name: "aesthetictrack.com" }],
 };
 
 export const viewport = {

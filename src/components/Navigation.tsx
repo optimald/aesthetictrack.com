@@ -22,7 +22,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold text-gray-900">
-              LaserCare Pro
+              aesthetictrack.com
             </Link>
           </div>
 
