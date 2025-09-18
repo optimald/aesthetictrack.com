@@ -1,9 +1,13 @@
+'use client';
+
 import Link from 'next/link';
 import { trackCTA, trackButtonClick, trackSectionView } from '@/lib/mixpanel';
+import { useEffect } from 'react';
 
-const CTASection = () => {
-  // Track section view
-  trackSectionView('CTA Section');
+const ClientCTASection = () => {
+  useEffect(() => {
+    trackSectionView('CTA Section');
+  }, []);
 
   return (
     <section id="pricing" className="section-padding bg-white">
@@ -55,4 +59,4 @@ const CTASection = () => {
   );
 };
 
-export default CTASection;
+export default ClientCTASection;

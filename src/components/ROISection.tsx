@@ -1,4 +1,9 @@
+import { trackSectionView } from '@/lib/mixpanel';
+
 const ROISection = () => {
+  // Track section view
+  trackSectionView('ROI Section');
+
   const metrics = [
     { value: "40%", label: "Reduction in Maintenance Costs", color: "text-green-400" },
     { value: "75%", label: "Faster Equipment Lookup", color: "text-blue-300" },

@@ -1,4 +1,9 @@
+import { trackSectionView } from '@/lib/mixpanel';
+
 const PainPointsSection = () => {
+  // Track section view
+  trackSectionView('Pain Points Section');
+
   const painPoints = [
     {
       title: "Equipment Downtime Disrupts Revenue",

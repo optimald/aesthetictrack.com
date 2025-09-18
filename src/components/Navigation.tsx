@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { trackButtonClick, trackNavigation, trackCTA } from '@/lib/mixpanel';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +35,10 @@ const Navigation = () => {
                   key={item.name}
                   href={item.href}
                   className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  onClick={() => {
+                    trackNavigation(item.name, 'desktop_nav');
+                    trackButtonClick(`Nav - ${item.name}`, 'navigation');
+                  }}
                 >
                   {item.name}
                 </Link>
@@ -46,12 +51,20 @@ const Navigation = () => {
             <Link
               href="#pricing"
               className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              onClick={() => {
+                trackCTA('View Pricing', 'text_link', { location: 'header' });
+                trackButtonClick('View Pricing', 'cta');
+              }}
             >
               View Pricing
             </Link>
             <Link
               href="#demo"
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              onClick={() => {
+                trackCTA('Live Demo', 'button', { location: 'header' });
+                trackButtonClick('Live Demo', 'cta');
+              }}
             >
               Live Demo
             </Link>

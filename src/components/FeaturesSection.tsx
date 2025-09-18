@@ -1,6 +1,10 @@
 import { DollarSign, Shield, Users } from 'lucide-react';
+import { trackSectionView } from '@/lib/mixpanel';
 
 const FeaturesSection = () => {
+  // Track section view
+  trackSectionView('Features Section');
+
   const features = [
     {
       title: "Protect Revenue & Client Trust",

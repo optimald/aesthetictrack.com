@@ -1,6 +1,10 @@
 import { QrCode, Building2, Wrench, Users, FileText, Plug, BarChart3, Cloud, Smartphone } from 'lucide-react';
+import { trackSectionView } from '@/lib/mixpanel';
 
 const ManagementFeaturesSection = () => {
+  // Track section view
+  trackSectionView('Management Features Section');
+
   const features = [
     {
       title: "QR Code Asset Tracking",

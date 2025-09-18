@@ -1,6 +1,10 @@
 import { Zap, Circle, Radio, Volume2, Snowflake, Syringe, Flame, Camera } from 'lucide-react';
+import { trackSectionView } from '@/lib/mixpanel';
 
 const DeviceTypesSection = () => {
+  // Track section view
+  trackSectionView('Device Types Section');
+
   const deviceTypes = [
     { name: "IPL Systems", icon: Zap },
     { name: "Laser Devices", icon: Circle },

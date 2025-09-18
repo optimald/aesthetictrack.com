@@ -1,10 +1,14 @@
+'use client';
+
 import Link from 'next/link';
 import { Rocket } from 'lucide-react';
 import { trackCTA, trackButtonClick, trackSectionView } from '@/lib/mixpanel';
+import { useEffect } from 'react';
 
-const HeroSection = () => {
-  // Track section view
-  trackSectionView('Hero Section');
+const ClientHeroSection = () => {
+  useEffect(() => {
+    trackSectionView('Hero Section');
+  }, []);
 
   return (
     <section id="home" className="hero-gradient text-white py-20 lg:py-32">
@@ -58,4 +62,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default ClientHeroSection;
