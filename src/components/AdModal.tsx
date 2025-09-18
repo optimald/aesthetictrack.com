@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import { trackEvent } from '@/lib/mixpanel';
+import Image from 'next/image';
 
 interface AdModalProps {
   isOpen: boolean;
@@ -64,53 +65,39 @@ const AdModal = ({ isOpen, onClose, adType }: AdModalProps) => {
         <div className="p-6">
           {adType === 'gusto' ? (
             <div className="text-center">
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Simplify Your HR & Payroll
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Gusto makes payroll, benefits, and HR simple for small businesses
-                </p>
-              </div>
-              <div className="space-y-3">
-                <a
-                  href="https://get.gusto.com/q0duhc39sen7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
-                  onClick={() => handleAdClick('primary_cta')}
-                >
-                  Get Started with Gusto
-                </a>
-                <p className="text-xs text-gray-500">
-                  Trusted by 300,000+ businesses
-                </p>
-              </div>
+              <a
+                href="https://get.gusto.com/q0duhc39sen7"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleAdClick('modal_ad')}
+                className="block hover:opacity-90 transition-opacity"
+              >
+                <Image
+                  src="/ads/gusto/AwarenessAds_Characters_300x250.png"
+                  alt="Gusto - Simplify Your HR & Payroll"
+                  width={300}
+                  height={250}
+                  className="rounded-lg mx-auto"
+                />
+              </a>
             </div>
           ) : (
             <div className="text-center">
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Medspa Software by Boulevard
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Smarter than your EMR - Built for client experience
-                </p>
-              </div>
-              <div className="space-y-3">
-                <a
-                  href="https://try.joinblvd.com/aesthetictrackcom"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-colors"
-                  onClick={() => handleAdClick('primary_cta')}
-                >
-                  Try Boulevard
-                </a>
-                <p className="text-xs text-gray-500">
-                  Client Experience Platform for Medspas
-                </p>
-              </div>
+              <a
+                href="https://try.joinblvd.com/aesthetictrackcom"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => handleAdClick('modal_ad')}
+                className="block hover:opacity-90 transition-opacity"
+              >
+                <Image
+                  src="/ads/boulevard/Affiliate Banner - Medspa - 300x250.jpg"
+                  alt="Boulevard - Medspa Software"
+                  width={300}
+                  height={250}
+                  className="rounded-lg mx-auto"
+                />
+              </a>
             </div>
           )}
         </div>
