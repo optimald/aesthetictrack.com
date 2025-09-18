@@ -47,14 +47,7 @@ const ClientCTASection = () => {
           <div className="border-t pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-center md:text-left">
-                <p className="text-gray-500 text-sm">
-                  Powered by{' '}
-                  <span className="font-semibold text-gray-700">optimal.dev</span>
-                </p>
-                <p className="text-gray-400 text-xs mt-1">
-                  AI-accelerated software, engineered for results
-                </p>
-                <p className="text-gray-400 text-xs mt-2">
+                <p className="text-gray-400 text-xs">
                   © 2025 aesthetictrack.com. All rights reserved.
                 </p>
               </div>
