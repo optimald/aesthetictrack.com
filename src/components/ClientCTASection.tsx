@@ -23,7 +23,7 @@ const ClientCTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link
               href="#pricing"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="bg-gray-600 hover:bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
               onClick={() => {
                 trackCTA('View Pricing Plans', 'primary_button', { location: 'footer_cta' });
                 trackButtonClick('View Pricing Plans - Footer', 'cta');
@@ -33,7 +33,7 @@ const ClientCTASection = () => {
             </Link>
             <Link
               href="#demo"
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105"
+              className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105"
               onClick={() => {
                 trackCTA('Try Live Demo', 'secondary_button', { location: 'footer_cta' });
                 trackButtonClick('Try Live Demo - Footer', 'cta');
@@ -51,6 +51,9 @@ const ClientCTASection = () => {
             </p>
             <p className="text-gray-400 text-xs mt-1">
               AI-accelerated software, engineered for results
+            </p>
+            <p className="text-gray-400 text-xs mt-2">
+              © 2025 aesthetictrack.com. All rights reserved.
             </p>
           </div>
         </div>

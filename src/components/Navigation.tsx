@@ -17,12 +17,12 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <nav className="bg-gray-900 shadow-sm border-b border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-xl font-bold text-gray-900">
+            <Link href="/" className="text-xl font-bold text-white">
               aesthetictrack.com
             </Link>
           </div>
@@ -34,7 +34,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200"
                   onClick={() => {
                     trackNavigation(item.name, 'desktop_nav');
                     trackButtonClick(`Nav - ${item.name}`, 'navigation');
@@ -50,7 +50,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="#pricing"
-              className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
+              className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200"
               onClick={() => {
                 trackCTA('View Pricing', 'text_link', { location: 'header' });
                 trackButtonClick('View Pricing', 'cta');
@@ -60,7 +60,7 @@ const Navigation = () => {
             </Link>
             <Link
               href="#demo"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200"
               onClick={() => {
                 trackCTA('Live Demo', 'button', { location: 'header' });
                 trackButtonClick('Live Demo', 'cta');
@@ -90,12 +90,12 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900 border-t border-gray-700">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                  className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -104,14 +104,14 @@ const Navigation = () => {
               <div className="pt-4 space-y-2">
                 <Link
                   href="#pricing"
-                  className="text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium"
+                  className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   View Pricing
                 </Link>
                 <Link
                   href="#demo"
-                  className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                  className="bg-orange-500 hover:bg-orange-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Live Demo

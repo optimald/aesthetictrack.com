@@ -37,7 +37,7 @@ const ClientHeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="#pricing"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="bg-gray-600 text-white hover:bg-gray-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
               onClick={() => {
                 trackCTA('View Pricing', 'primary_button', { location: 'hero' });
                 trackButtonClick('View Pricing - Hero', 'cta');
@@ -47,7 +47,7 @@ const ClientHeroSection = () => {
             </Link>
             <Link
               href="#demo"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105"
+              className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-200 transform hover:scale-105"
               onClick={() => {
                 trackCTA('Live Demo', 'secondary_button', { location: 'hero' });
                 trackButtonClick('Live Demo - Hero', 'cta');

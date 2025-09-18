@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --secondary: #f8fafc;
-  --accent: #059669;
-  --text-primary: #111827;
-  --text-secondary: #6b7280;
-  --border: #e5e7eb;
+  --background: #282828;
+  --foreground: #ffffff;
+  --primary: #5C5C6B;
+  --primary-dark: #4A4A5A;
+  --secondary: #343434;
+  --accent: #F39C12;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --border: #404040;
+  --card-bg: #343434;
+  --header-bg: #1E1E1E;
 }
 
 @theme inline {
@@ -36,7 +38,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
 .section-padding {
@@ -47,4 +49,37 @@ body {
   .section-padding {
     padding: 3rem 0;
   }
+}
+
+/* Dark theme overrides */
+.bg-white {
+  background-color: var(--card-bg) !important;
+}
+
+.bg-gray-50 {
+  background-color: var(--secondary) !important;
+}
+
+.text-gray-900 {
+  color: var(--text-primary) !important;
+}
+
+.text-gray-600 {
+  color: var(--text-secondary) !important;
+}
+
+.text-gray-700 {
+  color: var(--text-secondary) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--border) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3) !important;
 }
